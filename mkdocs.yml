@@ -33,7 +33,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-   # - navigation.instant
+    - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
     - navigation.integration
@@ -70,6 +70,7 @@ nav:
                   - Set up: cdk/get-started/deploy-validium/node/set-up.md
                   - Configure the deployment: cdk/get-started/deploy-validium/node/configure-deployment.md
                   - Run node and services: cdk/get-started/deploy-validium/node/run-node-services.md
+                  - Test transaction: cdk/get-started/deploy-validium/node/test-transaction.md
           - Rollup: 
               - Introduction: cdk/get-started/deploy-rollup/intro.md
               - Environment overview: cdk/get-started/deploy-rollup/environment-overview.md
@@ -82,9 +83,11 @@ nav:
               - Start services: cdk/get-started/deploy-rollup/start-services.md
         - Connect to CDK testnet: cdk/get-started/connect-testnet.md
       - How to:
+        - Quickly test a running stack: cdk/how-to/quick-test-stack.md
         - Manage allowlists with policies: cdk/how-to/manage-policies.md
       - Architecture:
-        - DAC: cdk/architecture/dac.md
+        - CDK rollup option: cdk/architecture/cdk-zkevm-option.md
+        - CDK validium option: cdk/architecture/cdk-validium-option.md
       - Specification:
         - Validium vs rollup: cdk/spec/validium-vs-rollup.md
       - Concepts:
@@ -92,6 +95,7 @@ nav:
         - Validium: cdk/concepts/validium.md
         - Data availability: cdk/concepts/dac.md
       - Additional resources:
+        - Third-party guides: cdk/resources/third-party-guides.md
         - CDK repos: cdk/resources/cdk-repo-reference.md
   - zkEVM:
       - zkEVM: zkEVM/index.md
@@ -301,8 +305,6 @@ nav:
             - Topup: pos/architecture/heimdall/topup.md
             - Chain management: pos/architecture/heimdall/chain-management.md
             - Governance: pos/architecture/heimdall/governance.md
-      #- Specification:
-      #    - Specification: pos/spec/index.md
       - Reference:
         - Contracts:
           - Genesis contracts: pos/reference/contracts/genesis-contracts.md
@@ -545,13 +547,14 @@ nav:
           - Band standard dataset: tools/oracles/bandstandarddataset.md
           - Chainlink: tools/oracles/chainlink.md
           - DIA: tools/oracles/diadataoracles.md
-          - UMA optimistic oracle: tools/oracles/optimisticoracle.md
           - Razor: tools/oracles/razor.md
           - Supra: tools/oracles/supra.md
           - Tellor: tools/oracles/tellor.md
+          - UMA optimistic oracle: tools/oracles/optimisticoracle.md
           - Umbrella: tools/oracles/umbrella.md
       - Wallets:
           - Getting started:  tools/wallets/getting-started.md
+          - Polygon Portal: tools/wallets/portal.md
           - Metamask:
               - Overview: tools/wallets/metamask/index.md
               - Create MetaMask wallet: tools/wallets/metamask/create-metamask-wallet.md
@@ -563,13 +566,14 @@ nav:
               - Create wallet:  tools/wallets/venly/create-wallet.md
               - Add network:  tools/wallets/venly/add-network.md
               - Add custom token:  tools/wallets/venly/custom-tokens.md
-          - Wallet link: tools/wallets/wallet-link.md
-          - Fortmatic: tools/wallets/fortmatic.md
-          - Portis:  tools/wallets/portis.md
-          - Torus:  tools/wallets/torus.md          
-          - WalletConnect:  tools/wallets/walletconnect.md
-          - SlashAuth:  tools/wallets/slashauth.md
+          - Fortmatic: tools/wallets/fortmatic.md    
+          - Openfort: tools/wallets/openfort.md
           - Particle network:  tools/wallets/particle-network.md
+          - Portis:  tools/wallets/portis.md    
+          - SlashAuth:  tools/wallets/slashauth.md
+          - Torus:  tools/wallets/torus.md  
+          - Wallet link: tools/wallets/wallet-link.md
+          - WalletConnect:  tools/wallets/walletconnect.md
           - Web3Modal: tools/wallets/using-web3modal.md
       - Block explorers:
           - Polygon: https://polygonscan.com/ 
@@ -601,20 +605,6 @@ extra:
   analytics:
     provider: custom
     property: google    
-  #  feedback:  # feedback form only works when Google Analytics is set up and working
-  #    title: Was this page helpful?
-  #    ratings:
-  #      - icon: fontawesome/regular/face-grin-stars
-  #        name: This page was helpful
-  #        data: 1
-  #        note: >-
-  #          Thanks for your feedback!
-  #      - icon: fontawesome/regular/face-grimace
-  #        name: This page could be improved
-  #        data: 0
-  #        note: >-
-  #          Thanks for your feedback! Help us improve this page by
-  #          using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/solid/circle-question
       link: https://support.polygon.technology/support/solutions
